@@ -1,0 +1,85 @@
+.mdb-lightbox .overlay {
+  height: 150vh;
+  width: 150vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+.mdb-lightbox .ui-controls {
+  width: 99vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: 10000;
+}
+
+.mdb-lightbox .ui-controls > * {
+  position: fixed;
+  z-index: 999999;
+}
+.mdb-lightbox .overlay.active {
+  z-index: 9999;
+  background-color: black;
+}
+
+.mdb-lightbox .next-img,
+.mdb-lightbox .prev-img {
+  transform-origin: center;
+}
+.mdb-lightbox .next-img {
+  left: 150% !important;
+}
+.mdb-lightbox .prev-img {
+  left: -50% !important;
+}
+
+.mdb-lightbox img:not(.zoom) {
+  transform-origin: top left;
+}
+/* transform: translate(-50%,-50%) scale(1) translate3d(0,0,0); */
+.mdb-lightbox img.zoom {
+  z-index: 10001;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1) translate3d(0, 0, 0);
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: text;
+  /* pointer-events: none; */
+  transform-origin: center;
+  outline: none;
+}
+
+.mdb-lightbox .mdb-lightbox figure img.zoom:hover {
+  opacity: 1;
+}
+
+.mdb-lightbox .block {
+  display: block;
+}
+
+.mdb-lightbox .pswp__button.lb-zoom-out {
+  background-position: -132px 0;
+}
+.mdb-lightbox .pswp__button.pswp__button--fs.fullscreen {
+  background-position: -44px 0;
+}
+
+.mdb-lightbox .arrow-container {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mdb-lightbox .pswp__button--left,
+.mdb-lightbox .pswp__button--right {
+  width: 0px;
+  height: 0px;
+  margin-top: -100px;
+}

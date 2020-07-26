@@ -1,0 +1,104 @@
+.thumb {
+  transition: top .2s, transform .2s, border-radius .2s;
+}
+
+div .range-field input[type="range"]+.thumb,
+div .range-field input[type="range"]+.thumb.active {
+  margin-left: -8px;
+  height: 30px;
+  width: 30px;
+  overflow: 'hidden';
+}
+
+div .range-field input[type="range"]+.thumb .value,
+div .range-field input[type="range"]+.thumb.active .value {
+  transform: rotate(45deg) translateY(25%);
+  color: #fff;
+  margin-top: 0;
+  margin-left: 0;
+  height: 30px;
+  font-size: 10px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+}
+
+/* thumb */
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background-color: #4285f4;
+  transform-origin: 50% 50%;
+  margin: -5px 0 0 0;
+  transition: 0.3s;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ccc;
+}
+
+input[type=range]::-moz-range-track {
+  /*required for proper track sizing in FF*/
+  height: 3px;
+  background: #c2c0c2;
+  border: none;
+}
+
+input[type=range]::-moz-range-thumb {
+  border: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: #4285f4;
+  margin-top: -5px;
+}
+
+input[type=range]:-moz-focusrin g {
+  /*hide the outline behind the border*/
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+}
+
+input[type=range]:focus::-moz-range-track {
+  background: #c2c0c2;
+}
+
+input[type=range]::-ms-track {
+  height: 3px;
+  background: transparent;
+  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+  border-color: transparent;
+  /*leave room for the larger thumb to overflow with a transparent border */
+  border-width: 6px 0;
+  color: transparent;
+  /*remove default tick marks*/
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #c2c0c2;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #c2c0c2;
+}
+
+input[type=range]::-ms-thumb {
+  border: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: #4285f4;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #c2c0c2;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #c2c0c2;
+}

@@ -1,0 +1,23 @@
+.side-nav.wide .collapsible button {
+  padding-left: 23px;
+  transition: all 0.3s ease-in-out;
+}
+
+a:not([href]):not([tabindex]),
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([tabindex]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.side-nav .collapsible button {
+  display: block;
+  height: 44px;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #fff;
+}
+.side-nav .collapsible li button:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
